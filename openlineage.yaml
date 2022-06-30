@@ -1,0 +1,12 @@
+#OPENLINEAGE_URL=http://host.docker.internal:5000
+#OPENLINEAGE_NAMESPACE=example
+AIRFLOW__LINEAGE__BACKEND=openlineage.lineage_backend.OpenLineageBackend
+
+project:
+  name: openlineage
+postgres:
+  port: 5435
+
+#psql -h localhost -p 5435 -U postgres
+#<enter password `postgres` when prompted>
+create database lineagedemo;
